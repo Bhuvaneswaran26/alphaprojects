@@ -6,15 +6,17 @@ def password_checker(password):
     specialcheck=True
     for i in password:
         c=ord(i)
-        if i.isdigit():
-            digitcheck=False
-        elif i==i.upper():
-            uppercheck=False
-        elif i==i.lower():
-            lowercheck=False
-        elif not((c>64 and c<91) or (c>96 and c<123) or (c>46 and c<58)):
-            specialcheck=False
+        if i.isalnum():
+            if i.isdigit():
+                digitcheck=False
+            elif i==i.upper():
+                uppercheck=False
+            elif i==i.lower():
+                lowercheck=False
             
+        else:
+            specialcheck=False
+                
     if lowercheck:
         print("Lowercase character is missing")
     if uppercheck:
@@ -24,7 +26,7 @@ def password_checker(password):
     if specialcheck:
         print("specialcharacter is missing")
     if (lowercheck and uppercheck and digitcheck and specialcheck):
-        print("your password "+password+" is valid")
+        print("Valid password")
     else:
         print("Invalid Password")
 def email_checker(gmail):
@@ -41,9 +43,9 @@ def email_checker(gmail):
     else:
         status=False
     if status:
-        print("your Gamil is valid")
+        print("Valid Gmail")
     else:
-        print("Your Gmail is Invalid")
+        print("Invalid Gmail")
 
                     
 
