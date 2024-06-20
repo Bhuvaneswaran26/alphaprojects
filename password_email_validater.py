@@ -23,7 +23,7 @@ def password_checker(password):
         print("Number is missing") 
     if specialcheck:
         print("specialcharacter is missing")
-    if not(lowercheck and uppercheck and digitcheck and specialcheck):
+    if (lowercheck and uppercheck and digitcheck and specialcheck):
         print("your password "+password+" is valid")
     else:
         print("Invalid Password")
