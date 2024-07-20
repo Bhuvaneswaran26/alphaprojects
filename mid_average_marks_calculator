@@ -1,8 +1,7 @@
 for i in range(10):
     print("Enter the mid_1 and mid_2 marks")
-    marks=input().split()
-    marks1=int(marks[0])
-    marks2=int(marks[1])
+    marks1=int(input())
+    marks2=int(input())
     maximum_marks=marks2
     minimum_marks=marks2
     if marks1>marks2:
