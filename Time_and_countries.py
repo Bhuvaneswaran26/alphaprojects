@@ -53,7 +53,7 @@ def am_pm(country_hour):
 def day_finder(date,month,year):
     last_two_digit_year=int(year[2:])
     year_remainder=last_two_digit_year//4
-    month_code=[0,0,3,3,6,1,4,6,2,5,0,3,5]
+    month_code=[0,3,3,6,1,4,6,2,5,0,3,5]
     year_code=2
     weekdays=['Sunday',"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
     sum=(year_remainder+last_two_digit_year+month_code[month]+year_code)%7
